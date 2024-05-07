@@ -1,0 +1,20 @@
+import streamlit as st
+
+# Function to simulate shooting zombies
+def shoot_zombies(num_zombies):
+    st.write(f"Shooting {num_zombies} zombies... Pew pew!")
+
+# Main function to create the Streamlit app interface
+def main():
+    st.title("Zombie Shooter Game")
+
+    st.write("Welcome to the Zombie Shooter Game! How many zombies do you want to shoot?")
+
+    num_zombies = st.slider("Select number of zombies", min_value=1, max_value=100, value=50, step=1)
+
+    if st.button("Shoot Zombies"):
+        shoot_zombies(num_zombies)
+
+if __name__ == "__main__":
+    main()
+
